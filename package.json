@@ -1,0 +1,79 @@
+{
+  "name": "@devprotocol/clubs-plugin-buy",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "!**/*.test.*",
+    "src"
+  ],
+  "scripts": {
+    "test": "ava || echo 'skip'",
+    "preview": "astro --root preview dev",
+    "build": "rollup -c",
+    "pretest": "yarn build",
+    "prebuild": "rimraf dist",
+    "lint": "yarn lint:eslint && yarn lint:format",
+    "lint:eslint": "eslint . --ext .ts,.js --fix",
+    "lint:format": "prettier --cache -w .",
+    "prepack": "yarn test && yarn build",
+    "prepare": "husky install"
+  },
+  "author": "Dev Protocol",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@astrojs/lit": "^2.0.1",
+    "@astrojs/react": "^2.1.3",
+    "@astrojs/svelte": "^2.1.1",
+    "@astrojs/tailwind": "^3.1.2",
+    "@astrojs/vue": "^2.1.1",
+    "@ava/typescript": "3.0.1",
+    "@devprotocol/clubs-core": "^0.44.0",
+    "@rollup/plugin-typescript": "11.0.0",
+    "astro": "^2.4.5",
+    "ava": "5.2.0",
+    "child_process": "^1.0.2",
+    "fs-extra": "^11.1.1",
+    "husky": "8.0.3",
+    "lit": "^2.7.4",
+    "node-fetch": "^3.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "rimraf": "4.1.2",
+    "rollup": "3.15.0",
+    "svelte": "^3.59.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vue": "^3.3.2"
+  },
+  "peerDependencies": {
+    "@devprotocol/clubs-core": "^^0.44.0",
+    "astro": "^^2.4.5",
+    "react": "^^18.2.0",
+    "react-dom": "^^18.2.0",
+    "svelte": "^^3.59.1",
+    "vue": "^^3.3.2"
+  },
+  "private": false,
+  "ava": {
+    "files": [
+      "**/*.test.ts"
+    ],
+    "typescript": {
+      "rewritePaths": {
+        "/": "dist/"
+      },
+      "compile": false
+    }
+  }
+}
