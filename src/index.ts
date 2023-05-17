@@ -1,4 +1,4 @@
-import type { Products } from '@constants/products'
+import type { Products } from './constants/products'
 import type { UndefinedOr } from '@devprotocol/util-ts'
 import {
   ClubsFunctionGetAdminPaths,
