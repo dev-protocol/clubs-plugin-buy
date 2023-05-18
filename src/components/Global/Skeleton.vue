@@ -3,16 +3,16 @@
 </template>
 
 <script>
-  import { defineComponent } from '@vue/runtime-core'
+import { defineComponent } from '@vue/runtime-core'
 
-  export default defineComponent({
-    name: 'Skeleton',
-    props: {
-      title: String,
-      id: String,
-      currency: String,
-      amount: String,
-      badgeImageSrc: String,
-    },
-  })
+export default defineComponent({
+  name: 'Skeleton',
+  props: {
+    title: String,
+    id: String,
+    currency: String,
+    amount: String,
+    badgeImageSrc: String,
+  },
+})
 </script>

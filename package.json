@@ -22,7 +22,7 @@
     "pretest": "yarn build",
     "prebuild": "rimraf dist",
     "lint": "yarn lint:eslint && yarn lint:format",
-    "lint:eslint": "eslint . --ext .ts,.js --fix",
+    "lint:eslint": "eslint --fix \"**/*.{js,mjs,cjs}\"",
     "lint:format": "prettier --cache -w .",
     "prepack": "yarn test && yarn build",
     "prepare": "husky install"

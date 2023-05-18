@@ -1,4 +1,4 @@
 export enum CurrencyOption {
-    DEV = 'dev',
-    ETH = 'eth',
-  }
+  DEV = 'dev',
+  ETH = 'eth',
+}

@@ -4,12 +4,12 @@ import config from '../../config'
 import plugins from '../../plugins'
 
 export async function getStaticPaths() {
-	const { getStaticPaths } = pageFactory({
-		config,
-		plugins,
-	})
+  const { getStaticPaths } = pageFactory({
+    config,
+    plugins,
+  })
 
-	return getStaticPaths()
+  return getStaticPaths()
 }
 
 const Content = Astro.props.component
@@ -17,5 +17,5 @@ const Layout = Astro.props.layout
 ---
 
 <Layout {...Astro.props}>
-	<Content {...Astro.props} />
+  <Content {...Astro.props} />
 </Layout>

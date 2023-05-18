@@ -1,10 +1,10 @@
 <template>
   <div
     v-if="!stakeSuccessful"
-    class="relative mx-auto mb-12 grid items-start rounded-xl bg-dp-blue-grey-300 p-4 shadow lg:container lg:mt-12 lg:grid-cols-[auto,_480px] lg:gap-12"
+    class="bg-dp-blue-grey-300 relative mx-auto mb-12 grid items-start rounded-xl p-4 shadow lg:container lg:mt-12 lg:grid-cols-[auto,_480px] lg:gap-12"
   >
     <section class="flex flex-col">
-      <h2 class="mb-8 font-title text-4xl font-bold">
+      <h2 class="font-title mb-8 text-4xl font-bold">
         <span v-if="page === 'BUY'">BUY</span>
         <span v-if="page === 'JOIN'">JOIN</span>
       </h2>
@@ -156,7 +156,7 @@
     class="flex flex-col items-center justify-center"
     v-if="stakeSuccessful"
   >
-    <h2 class="mb-8 font-title text-4xl font-bold">Completed</h2>
+    <h2 class="font-title mb-8 text-4xl font-bold">Completed</h2>
     <a href="/" class="text-blue-400">Back to top</a>
   </section>
 </template>
@@ -173,7 +173,11 @@ import { BigNumberish, constants, providers, utils } from 'ethers'
 import BigNumber from 'bignumber.js'
 import { Subscription, zip } from 'rxjs'
 import { CurrencyOption } from '../../constants/currencyOption'
-import { fetchDevForEth, fetchEthForDev, fetchSTokens } from '../../fixtures/utility'
+import {
+  fetchDevForEth,
+  fetchEthForDev,
+  fetchSTokens,
+} from '../../fixtures/utility'
 import Skeleton from '../Global/Skeleton.vue'
 import { stakeWithEthForPolygon } from '../../fixtures/dev-kit'
 
