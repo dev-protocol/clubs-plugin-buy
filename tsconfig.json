@@ -1,24 +1,22 @@
 {
-	"compilerOptions": {
-		"lib": ["DOM"],
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"target": "ESNext",
-		"outDir": "dist",
-		"rootDir": ".",
-		"sourceMap": false,
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
-		"declaration": true,
-		"jsx": "react",
-		"experimentalDecorators": true
-	},
-	"include": [
-		"src",
-	],
-	"exclude": []
+  "compilerOptions": {
+    "lib": ["DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": true,
+    "jsx": "react",
+    "experimentalDecorators": true
+  },
+  "include": ["src"],
+  "exclude": []
 }
