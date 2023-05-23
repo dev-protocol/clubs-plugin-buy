@@ -2,18 +2,23 @@
   "name": "@devprotocol/clubs-plugin-buy",
   "version": "0.1.0",
   "type": "module",
+  "description": "This is buy plugin for Clubs.",
   "main": "dist/index.js",
   "exports": {
     ".": {
       "default": "./dist/index.js"
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "dist/**/*.d.ts",
     "dist/**/*.js",
     "!**/*.test.*",
     "src"
+  ],
+  "keywords": [
+    "clubs-plugin",
+    "clubs"
   ],
   "scripts": {
     "test": "ava || echo 'skip'",
